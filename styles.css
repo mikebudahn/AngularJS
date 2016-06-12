@@ -3,7 +3,10 @@
 	color: red;
 }
 .navy {
-	color: navy;
+	color: blue;
+}
+.big {
+	font-size:2em;
 }
 
 /* ng-cloak */
