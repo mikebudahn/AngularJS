@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-ng-app="customersApp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +9,7 @@
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body data-ng-controller="CustomersController">
 
     <nav class="navbar navbar-default">
       <div class="container-fluid">
@@ -43,7 +43,34 @@
         <div class="col-md-9 col-md-offset-2">
           <!-- START CONTENT -->
 
-          <h1>04-Loops</h1>
+          <h1>04-Controllers</h1>
+
+          <div class="myWorkArea"><!-- START MYWORKAREA -->
+            <p>
+              Filter by name: <input type="text" data-ng-model="customerFilter.name" />
+            </p>
+            <p>
+              Click columns heading to sort
+            </p>
+            <table class="myTable">
+              <tr>
+                <th data-ng-click="doSort('name')">Name</th>
+                <th data-ng-click="doSort('city')">City</th>
+                <th data-ng-click="doSort('orderTotal')">Order Total</th>
+                <th data-ng-click="doSort('joined')">Joined</th>
+              </tr>
+              <tr data-ng-repeat="cust in customers | filter:customerFilter | orderBy:sortBy:reverse">
+                <td>{{ cust.name }}</td>
+                <td>{{ cust.city }}</td>
+                <td>{{ cust.orderTotal | currency }}</td>
+                <td>{{ cust.joined | date }}</td>
+              </tr>
+            </table>
+            <span>Total customers: {{ customers.length }}</span>
+
+
+          </div><!-- end MYWORKAREA -->
+
 
           <!-- END CONTENT -->
         </div><!-- end MD-6 -->
@@ -54,7 +81,7 @@
     <nav class="navbar navbar-default navbar-fixed-bottom">
       <div class="container">
         <div class="row text-center">
-          Bootstrap
+          Bootstrap 1.5.6
         </div><!-- end ROW -->
       </div><!-- end CONTAINER -->
     </nav><!-- end FOOTER -->
@@ -63,5 +90,8 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+    <script src="/app/app.js"></script>
+    <script src="/app/controllers/customerControllers.js"></script>
   </body>
 </html>

@@ -13,3 +13,11 @@
 [ng\:clock], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng.ng-cloak {
 	display: none !important;
 }
+
+.myTable tr td {
+	padding:1em;
+}
+.myTable th {
+	padding:1em;
+	text-align:center;
+}
