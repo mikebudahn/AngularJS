@@ -21,3 +21,6 @@
 	padding:1em;
 	text-align:center;
 }
+.myTable th:hover {
+	cursor: pointer;
+}
