@@ -28,7 +28,7 @@
         <div class="collapse navbar-collapse" id="myNavigation">
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Examples <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Demonstrations <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="http://mikebudahn.com/">Mike@Home</a></li>
               </ul>
@@ -51,7 +51,7 @@
               Filter by name: <input type="text" data-ng-model="customerFilter.name" />
             </p>
             <p>
-              Click column headings to sort.
+              Click column headings to sort!
             </p>
             <table class="myTable">
               <tr>
@@ -90,11 +90,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-route.js"></script>
     <script src="/js/mike.js"></script>
     <!-- Includes for examples -->
-    <script src="/app/app.js"></script>
-    <script src="/app/controllers/customerControllers.js"></script>
+    <script src="app/app-04.js"></script>
+    <script src="app/controllers/customersController.js"></script>
+    <script src="app/controllers/ordersController.js"></script>
     <!-- THE VERY END -->
   </body>
 </html>
