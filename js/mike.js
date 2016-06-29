@@ -2,7 +2,7 @@
 // Mike Budahn, 6/2016
 //
 // ON LOAD
-(function() {
+$(function() {
 	// Build drop-down navigation menu
 	var menuItems = "/menu/menu-items.js";
 	$.getJSON(menuItems, function(data) {
@@ -11,5 +11,4 @@
 		});
 	});
 	//
-
-})();
+});
