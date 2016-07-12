@@ -3,7 +3,12 @@
 //
 // ON LOAD
 $(function() {
+	$.ajaxSetup( {
+        // Disable Ajax caching
+        cache: false
+    });
 	// Build drop-down navigation menu
+
 	var menuItems = "/menu/menu-items.js";
 	$.getJSON(menuItems, function(data) {
 		$.each(data, function( i, item ) {
